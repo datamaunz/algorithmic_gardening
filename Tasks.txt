@@ -1,0 +1,42 @@
+Initial:
+- Sort DF rows & columns A-Z.
+- Create "name_correction" Dictionary.
+-----------------------------------------------------------
+- 42 Values in rows, not present in headers.
+- 111 Values in headers, not present in rows.
+
+============================================================
+
+10 Sept.:
+- First glance at columns and rows:
+	- "Alliums" exists in both rows & columns.
+	- Onion is an allium, but also exists in column headers (no row index with "onion", though).
+
+#####################################################################################
+
+Further seperation characters & keywords: (apply to dataframe)
+* First Layer:
+	- " and "
+	- "/"
+	- " / "
+ 
+* Second Layer:
+	- " " (some instances have more text after name, i.e, explanations,etc.)
+
+
+Treatment would be to split, then df['name1']=1 ; df['name2']=1
+- Columns resulting from second layer should be dropped.
+
+######################################################################################
+
+Starting with the 42 row indeces missing from column headers:
+	** Instances:
+		
+	
+Columns:
+	** Instances:
+	- "Green onions with Chinese cabbage"
+	- "eggplant/aubergine" (both are nightshades)
+	- "eggplants and other nightshades"
+	- "especially..." (remove "especially " from names)
+	- Check instances of "tomato"; as multiple columns are showing
