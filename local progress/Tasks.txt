@@ -15,12 +15,15 @@ Initial:
 #####################################################################################
 
 Further seperation characters & keywords: (apply to dataframe)
-* First Layer:
+* Firstly:
+	- apply dictionary (edit 16/9: SpaCy's output in this case)
+* Secondly:
 	- " and "
 	- "/"
 	- " / "
+	-" or "
  
-* Second Layer:
+* Thirdly:
 	- " " (some instances have more text after name, i.e, explanations,etc.)
 
 
@@ -31,7 +34,7 @@ Treatment would be to split, then df['name1']=1 ; df['name2']=1
 
 Starting with the 42 row indeces missing from column headers:
 	** Instances:
-		
+	- From the 42 missing rows, only 1 row has its name (alyssum) as part of a column header (sweet alyssum).
 	
 Columns:
 	** Instances:
@@ -40,3 +43,8 @@ Columns:
 	- "eggplants and other nightshades"
 	- "especially..." (remove "especially " from names)
 	- Check instances of "tomato"; as multiple columns are showing
+
+--------------------------------------------------------------------------------------------
+Check out SpaCy -> to reduce plurals to singulars (carrots to carrot, for example)
+Convert every entry to a doc.
+Get a script that saves a squared-matrix dataframe, then pull request.
