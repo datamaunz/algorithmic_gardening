@@ -1,4 +1,4 @@
-import pandas as pd
+from src.load_packages import *
 
 def add_bucket(bucketdict, plants_dict): 
     # Creates a new bucket + fills it with element 0:
@@ -39,7 +39,7 @@ def add_items(df, bucket_plants_list, plants_dict):
     return bucket_plants_list
 
 
-
+@st.cache()
 def buckets_generator(df):
     bucketdict={}
     plants_dict={}
